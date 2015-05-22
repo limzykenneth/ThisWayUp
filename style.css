@@ -1,4 +1,4 @@
-@import url("//fonts.googleapis.com/css?family=Rambla:400,700,400italic|Crete+Round|Nunito:400,700|Quando|Andada");
+@import url("http://fonts.googleapis.com/css?family=Rambla:400,700,400italic|Crete+Round|Nunito:400,700|Quando|Andada");
 /* Libraries and Dependencies ---------------------------------------------- */
 
 
@@ -20,9 +20,9 @@
 }
 
 body {
-  padding: 1em;
-  background: #e7e7e7;
-  color: #444;
+  padding: 0px;
+  margin: 0px;
+  background: #fff;
 }
 
 a {
@@ -41,10 +41,7 @@ main {
 } 
 main article {
   width: 100%;
-  height: 960px;
-  padding: 1em;
-  margin: 16% 0;
-  box-shadow: 0 5px 10px rgba(51, 51, 51, 0.1);
+  height: 100vh;
   background: #fff;
   overflow: hidden;
   perspective: 600px;
@@ -59,8 +56,11 @@ main article:last-child {
 
 .cube,
 .cube .side {
-  width: 10em;
-  height:10em;
+  position:absolute;
+  top: 5em;
+  left: 0;
+  width: 5em;
+  height: 5em;
   background: rgba(255, 255, 255, 0.9);
   box-shadow: inset 0 0 0 10px #000;
   transform-style: preserve-3d;
@@ -78,27 +78,27 @@ main article:last-child {
   left: 0;
 }
 .cube .top {
-  top: -10em;
+  top: -5em;
   transform: rotateX(90deg);
   transform-origin: 50% 100%;
 }
 .cube .left {
-  left: -10em;
+  left: -5em;
   transform: rotateY(-90deg);
   transform-origin: 100% 50%;
 }
 .cube .right {
-  left: 10em;
+  left: 5em;
   transform: rotateY(90deg);
   transform-origin: 0% 50%;
 }
 .cube .bottom {
-  top: 10em;
+  top: 5em;
   transform: rotateX(-90deg);
   transform-origin: 50% 0%;
 }
 .cube .bottom .back {
-  top: 10em;
+  top: 5em;
   transform: rotateX(-90deg);
   transform-origin: 50% 0%;
 }
@@ -117,14 +117,13 @@ main article:last-child {
 
 
 #s6 .sandbox {
-
   width: 100%;
   transform-style: preserve-3d;
   transform:translate(40%,60%);
 }
 #s6 .sandbox .cube {
   transition: none;
-  transform: translateY(2em);
+  transform: translateY(0em);
   transform-origin: 50% 50% -2.5em;
   
 }
@@ -149,26 +148,26 @@ main article:last-child {
 }
 #s6 .sandbox .cube .top.flat {
   transform: rotateX(0deg);
-  top:-9.75em;
+  top: -4.75em;
   
 }
 #s6 .sandbox .cube .left.flat {
   transform: rotateY(0deg);
-  left: -9.75em;
+  left: -4.75em;
 }
 #s6 .sandbox .cube .right.flat {
   transform: rotateY(0deg);
-  left: 9.75em;
+  left: 4.75em;
 
 }
 #s6 .sandbox .cube .bottom.flat {
   transform: rotateX(0deg);
-  top:9.75em;
+  top: 4.75em;
   
 }
 #s6 .sandbox .cube .back.flat {
   transform: rotateX(0deg);
-  top:9.75em;
+  top: 4.75em;
   
   
 }

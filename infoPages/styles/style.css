@@ -1,0 +1,116 @@
+/*@font-face {
+    font-family: "Cooper Hewitt";
+    src: url(fonts/CooperHewitt-Medium.woff);
+    font-weight: normal;
+}
+@font-face {
+    font-family: "Cooper Hewitt";
+    src: url(fonts/CooperHewitt-Bold.woff);
+    font-weight: bold;
+}*/
+
+/* default settings (layout only, NOT for typographic details) */
+
+a:link{
+	text-decoration:none;
+	color:#44c;
+}
+
+a:visited{
+	text-decoration:none;
+	color:#44f;
+}
+
+body{
+	background-color:#fff;
+	font-family: "Cooper Hewitt", "Helvetica", sans-serif;
+}
+
+
+/* default typography presets */
+
+
+h1{
+	font-family: "Cooper Hewitt", "Helvetica", sans-serif;
+	font-size: 4em;
+}
+h2{
+	font-family: "Cooper Hewitt", "Helvetica", sans-serif;
+	font-size:3em;
+}
+h3{
+	font-size:2em;
+}
+h4{
+	font-size:1.5em;
+}
+h5{
+	font-size:1em;
+}
+h6{
+	font-size:0.5em;
+}
+p{
+
+}
+
+div{
+
+}
+
+
+
+/* custom modifications */
+.nameList{
+    /*display:inline-block;*/
+    position:relative;
+    width:20%;
+    float:left;
+    -webkit-column-count:2;
+}
+#nameList1{
+    top:0em;
+    left:0em;
+    width:40vh;
+    height:40vh;
+}
+#nameList2{
+    transform: rotate(90deg);
+    top:0em;
+    right:0em;
+    width:40vh;
+    height:40vh;
+}
+#nameList3{
+    transform: rotate(-90deg);
+    bottom:0em;
+    right:0em;
+    width:40vh;
+    height:40vh;
+}
+#nameList4{
+    transform: rotate(180deg);
+    bottom:0em;
+    left:0em;
+    width:40vh;
+    height:40vh;
+}
+
+/* transform test */
+.page-content{
+    overflow:hidden;
+    height:90vh;
+    width:90vh;
+    margin:0 auto;
+    transform: rotate(0deg);
+}
+
+#mainLogo{
+    width:100%;
+    height:100%;
+}
+
+/* responsive design */
+
+@media
+
