@@ -1,4 +1,7 @@
 $(document).ready(function() {
+    var centerX = ($(window).width() / 2) - 250;
+    var centerY = ($(window).height() / 2) - 250;
+    var scale = scalefactor();
     var anglesNow = 0;
     var count = 0;
     var winWidth = $(window).width();
@@ -24,19 +27,19 @@ $(document).ready(function() {
             });
             $(this).off();
             setTimeout(function() {
+                $('.cube, .cube .side').css('-webkit-transform-style','flat').css('transform','none');
                 transform(2, 'translate');
+            }, 1800);
+            setTimeout(function(){
                 $(".unfolded").css({
                     display: 'inline'
                 });
-            }, 1800);
+            },2000);
         });
     }
     var angleCount = 3;
-    var centerX = ($(window).width() / 2) - 250;
-    var centerY = ($(window).height() / 2) - 250;
     console.log(centerX);
     console.log(centerY);
-    var scale = 1;//scalefactor();
 
     function transform(face, transformType) {
         //rotation matrix, with scale according to scale factor
@@ -68,8 +71,7 @@ $(document).ready(function() {
             					 + moveTo[face][0] + ',' 
             					 + moveTo[face][1] + ')',
             transition: "all 0.3s ease",
-            'transform-origin': moveTo[face][2],
-            'backface-visibility': 'hidden'
+            'transform-origin': moveTo[face][2]
         });
     }
     $('div.rotate-button').click(function() {
