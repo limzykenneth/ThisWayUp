@@ -13,17 +13,18 @@
 
 a:link{
 	text-decoration:none;
-	color:#44c;
+	color:#c30;
 }
 
 a:visited{
 	text-decoration:none;
-	color:#44f;
+	color:#a10;
 }
 
 body{
 	background-color:#fff;
 	font-family: "Cooper Hewitt", "Helvetica", sans-serif;
+    line-height: 1.5em;
 }
 
 
@@ -66,7 +67,12 @@ div{
     position:relative;
     width:20%;
     float:left;
+}
+#page-content1 .nameList, #page-content2 .nameList{
     -webkit-column-count:2;
+}
+#page-content2 #nameList1{
+    -webkit-column-count:1;
 }
 #nameList1{
     top:0em;
@@ -78,22 +84,22 @@ div{
     transform: rotate(90deg);
     top:0em;
     right:0em;
-    width:40vh;
-    height:40vh;
+    width:45vh;
+    height:45vh;
 }
 #nameList3{
     transform: rotate(-90deg);
     bottom:0em;
     right:0em;
-    width:40vh;
-    height:40vh;
+    width:45vh;
+    height:45vh;
 }
 #nameList4{
     transform: rotate(180deg);
     bottom:0em;
     left:0em;
-    width:40vh;
-    height:40vh;
+    width:45vh;
+    height:45vh;
 }
 
 /* transform test */
@@ -108,6 +114,16 @@ div{
 #mainLogo{
     width:100%;
     height:100%;
+}
+
+.header2{
+    font-size:1.5em;
+    font-weight: bold;
+    line-height:1.2em;
+}
+.larger{
+    font-size: 2em;
+    line-height: 1.35em;
 }
 
 /* responsive design */
