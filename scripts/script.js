@@ -1,4 +1,5 @@
 $(document).ready(function() {
+    var anglesNow = 0;
     var count = 0;
     var winWidth = $(window).width();
     var winHeight = $(window).height();
@@ -24,6 +25,9 @@ $(document).ready(function() {
             $(this).off();
             setTimeout(function() {
                 transform(2, 'translate');
+                $(".unfolded").css({
+                    display: 'inline'
+                });
             }, 1800);
         });
     }
@@ -32,7 +36,7 @@ $(document).ready(function() {
     var centerY = ($(window).height() / 2) - 250;
     console.log(centerX);
     console.log(centerY);
-    var scale = scalefactor();
+    var scale = 1;//scalefactor();
 
     function transform(face, transformType) {
         //rotation matrix, with scale according to scale factor
@@ -64,12 +68,30 @@ $(document).ready(function() {
             					 + moveTo[face][0] + ',' 
             					 + moveTo[face][1] + ')',
             transition: "all 0.3s ease",
-            'transform-origin': moveTo[face][2]
+            'transform-origin': moveTo[face][2],
+            'backface-visibility': 'hidden'
         });
     }
     $('div.rotate-button').click(function() {
-        // var id = $(this).attr('id');
+        var id = $(this).attr('id');
         // transform(id, 'rotate');
+        // caching the object for performance reasons
+        var $elem = $('#page-content3');
+
+        // we use a pseudo object for the animation
+        // (starts from `0` to `angle`), you can name it as you want
+        $({deg: anglesNow}).animate({deg: anglesNow+90}, {
+            duration: 500,
+            step: function(now) {
+                // in the step-callback (that is fired each step of the animation),
+                // you can use the `now` paramter which contains the current
+                // animation-position (`0` up to `angle`)
+                $elem.css({
+                     transform: 'rotate(' + now + 'deg)'
+                });
+            }
+        });
+        anglesNow=anglesNow+90;
     });
     $('div.translate').click(function() {
         var id = $(this).attr('id');
@@ -191,24 +213,23 @@ $(document).ready(function(){
     $("#page-content2 #nameList3").html(list3);
     $("#page-content1 #nameList4").html(list4);
 
-    var anglesNow = 0;
-    $(window).click(function(e){
-        // caching the object for performance reasons
-        var $elem = $('.page-content');
+    // $(window).click(function(e){
+    //     // caching the object for performance reasons
+    //     var $elem = $('.page-content');
 
-        // we use a pseudo object for the animation
-        // (starts from `0` to `angle`), you can name it as you want
-        $({deg: anglesNow}).animate({deg: anglesNow+90}, {
-            duration: 500,
-            step: function(now) {
-                // in the step-callback (that is fired each step of the animation),
-                // you can use the `now` paramter which contains the current
-                // animation-position (`0` up to `angle`)
-                $elem.css({
-                     transform: 'rotate(' + now + 'deg)'
-                });
-            }
-        });
-        anglesNow=anglesNow+90;
-     });
+    //     // we use a pseudo object for the animation
+    //     // (starts from `0` to `angle`), you can name it as you want
+    //     $({deg: anglesNow}).animate({deg: anglesNow+90}, {
+    //         duration: 500,
+    //         step: function(now) {
+    //             // in the step-callback (that is fired each step of the animation),
+    //             // you can use the `now` paramter which contains the current
+    //             // animation-position (`0` up to `angle`)
+    //             $elem.css({
+    //                  transform: 'rotate(' + now + 'deg)'
+    //             });
+    //         }
+    //     });
+    //     anglesNow=anglesNow+90;
+    // });
 });
