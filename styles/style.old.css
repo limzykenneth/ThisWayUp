@@ -1,0 +1,259 @@
+@import url("http://fonts.googleapis.com/css?family=Rambla:400,700,400italic|Crete+Round|Nunito:400,700|Quando|Andada");
+/* Libraries and Dependencies ---------------------------------------------- */
+
+/* Global styles ----------------------------------------------------------- */
+
+body{
+  overflow:hidden;
+}
+
+.it, span, .cube .side {
+    display: inline-block;
+}
+.show {
+    opacity: 1 !important;
+}
+.hide {
+    opacity: 0 !important;
+}
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.main {
+    width: 100vw;
+    height: 90vh;
+    overflow: hidden;
+}
+.cube, .cube .side {
+    width: 500px;
+    height: 500px;
+    background: rgba(255, 255, 255, 0.9);
+    -webkit-box-shadow: inset 0 0 0 20px #000;
+    /*  0 0 0px 1px #ff0000; */
+
+    -moz-box-shadow: inset 0 0 0 10px #334455;
+    /* , 0 0 0px 1px #334455; */
+
+    -webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    -ms-transform-style: preserve-3d;
+    -o-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    /*background: url(http://www.upwaythis.com/images/logo-2.png) #fff;
+    background-size: 90%;
+    background-position: 50% 50%;*/
+}
+.cube .side {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.cube .top {
+    top: -500px;
+    -webkit-transform: rotateX(90deg);
+    -moz-transform: rotateX(90deg);
+    -ms-transform: rotateX(90deg);
+    -o-transform: rotateX(90deg);
+    transform: rotateX(90deg);
+    -webkit-transform-origin: 50% 100%;
+    -moz-transform-origin: 50% 100%;
+    -ms-transform-origin: 50% 100%;
+    -o-transform-origin: 50% 100%;
+    transform-origin: 50% 100%;
+    background: url(http://www.upwaythis.com/images/logo-3.png) #fff;
+    background-size: 90%;
+    background-position: 50% 50%;
+}
+.cube .left {
+    left: -500px;
+    -webkit-transform: rotateY(-90deg);
+    -moz-transform: rotateY(-90deg);
+    -ms-transform: rotateY(-90deg);
+    -o-transform: rotateY(-90deg);
+    transform: rotateY(-90deg);
+    -webkit-transform-origin: 100% 50%;
+    -moz-transform-origin: 100% 50%;
+    -ms-transform-origin: 100% 50%;
+    -o-transform-origin: 100% 50%;
+    transform-origin: 100% 50%;
+    background: #fff;
+    background-size: 90%;
+    background-position: 50% 50%;
+}
+.cube .right {
+    left: 500px;
+    -webkit-transform: rotateY(90deg);
+    -moz-transform: rotateY(90deg);
+    -ms-transform: rotateY(90deg);
+    -o-transform: rotateY(90deg);
+    transform: rotateY(90deg);
+    -webkit-transform-origin: 0% 50%;
+    -moz-transform-origin: 0% 50%;
+    -ms-transform-origin: 0% 50%;
+    -o-transform-origin: 0% 50%;
+    transform-origin: 0% 50%;
+    background: #fff;
+    background-size: 90%;
+    background-position: 50% 50%;
+}
+.cube .bottom {
+    top: 500px;
+    -webkit-transform: rotateX(-90deg);
+    -moz-transform: rotateX(-90deg);
+    -ms-transform: rotateX(-90deg);
+    -o-transform: rotateX(-90deg);
+    transform: rotateX(-90deg);
+    -webkit-transform-origin: 50% 0%;
+    -moz-transform-origin: 50% 0%;
+    -ms-transform-origin: 50% 0%;
+    -o-transform-origin: 50% 0%;
+    transform-origin: 50% 0%;
+    background: url(http://www.upwaythis.com/images/logo-3.png) #fff;
+    background-size: 90%;
+    background-position: 50% 50%;
+}
+.cube .bottom .back {
+    top: 500px;
+    -webkit-transform: rotateX(-90deg);
+    -moz-transform: rotateX(-90deg);
+    -ms-transform: rotateX(-90deg);
+    -o-transform: rotateX(-90deg);
+    transform: rotateX(-90deg);
+    -webkit-transform-origin: 50% 0%;
+    -moz-transform-origin: 50% 0%;
+    -ms-transform-origin: 50% 0%;
+    -o-transform-origin: 50% 0%;
+    transform-origin: 50% 0%;
+    background: url(http://www.upwaythis.com/images/logo-4.png) #fff;
+    background-size: 90%;
+    background-position: 50% 50%;
+}
+/* Slides ------------------------------------------------------------------ */
+
+.wrap {
+    -webkit-perspective: 800px;
+    perspective: 800px;
+    -webkit-perspective-origin: 50vw 30vh;
+    perspective-origin: 50vw 30vh;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+.cube {
+    transform: translate3d(50%, 30%, -1000px);
+    -webkit-transform-origin: 50% 50% -250px;
+    background: url(http://www.upwaythis.com/images/logo-2.png) #fff;
+    background-size: 90%;
+    background-position: 50% 50%;
+}
+.cube.rotate {
+    -webkit-animation: rotate-cube-slow 8s linear infinite;
+    -moz-animation: rotate-cube-slow 8s linear infinite;
+    -ms-animation: rotate-cube-slow 8s linear infinite;
+    -o-animation: rotate-cube-slow 8s linear infinite;
+    animation: rotate-cube-slow 8s linear infinite;
+}
+.cube .flat {
+    -webkit-transition: all 1.3s linear;
+    -moz-transition: all 1.3s linear;
+    -ms-transition: all 1.3s linear;
+    -o-transition: all 1.3s linear;
+    transition: all 1.3s ease-in;
+}
+.cube .top.flat {
+    -webkit-transform: rotateX(0deg);
+    -moz-transform: rotateX(0deg);
+    -ms-transform: rotateX(0deg);
+    -o-transform: rotateX(0deg);
+    transform: rotateX(0deg);
+    top: -480px;
+}
+.cube .left.flat {
+    -webkit-transform: rotateY(0deg);
+    -moz-transform: rotateY(0deg);
+    -ms-transform: rotateY(0deg);
+    -o-transform: rotateY(0deg);
+    transform: rotateY(0deg);
+    left: -480px;
+}
+.cube .right.flat {
+    -webkit-transform: rotateY(0deg);
+    -moz-transform: rotateY(0deg);
+    -ms-transform: rotateY(0deg);
+    -o-transform: rotateY(0deg);
+    transform: rotateY(0deg);
+    left: 480px;
+}
+.cube .bottom.flat {
+    -webkit-transform: rotateX(0deg);
+    -moz-transform: rotateX(0deg);
+    -ms-transform: rotateX(0deg);
+    -o-transform: rotateX(0deg);
+    transform: rotateX(0deg);
+    top: 480px;
+}
+.cube .back.flat {
+    -webkit-transform: rotateX(0deg);
+    -moz-transform: rotateX(0deg);
+    -ms-transform: rotateX(0deg);
+    -o-transform: rotateX(0deg);
+    transform: rotateX(0deg);
+    top: 480px;
+}
+.cube.flat {
+    box-shadow: inset 0 0 0 20px #000;
+    background-size: 40%;
+    background-position: 10% 10%;
+    background-repeat: no-repeat;
+}
+.cube .flat {
+    background: #fff;
+}
+.return-flat {
+    transform: rotateX(0deg), rotateY(0deg);
+    transition: all 2.3s ease-in;
+}
+.flat .rotate-button {
+    background: url('http://www.jordanwoodage.com/rotatebutton.svg');
+    width: 50px;
+    height: 50px;
+    background-repeat: no-repeat;
+    top: 45%;
+    left: 45%;
+    position: absolute;
+    cursor: pointer;
+}
+.rotate-button: :hover {} .flat .arrow-left, .flat .arrow-right, .flat .arrow-down, .flat .arrow-up {
+    background: url('http://www.jordanwoodage.com/arrowbutton.svg');
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    background-size: 40%;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    background-position: 42% 42%;
+}
+.arrow-left {
+    top: 45%;
+    left: 10%;
+    transform: rotate(90deg);
+}
+.arrow-right {
+    top: 45%;
+    right: 10%;
+    transform: rotate(270deg);
+}
+.arrow-down {
+    bottom: 10%;
+    left: 45%;
+}
+.arrow-up {
+    top: 10%;
+    left: 45%;
+    transform: rotate(180deg);
+}
