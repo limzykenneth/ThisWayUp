@@ -60,7 +60,9 @@ $(document).ready(function() {
         }
         //transformation matrices for rotating around the face at position moveTo[]
         $('.cube').css({
-            transform: 'matrix(' + value[angleCount][0] + ',' + value[angleCount][1] + ',' + value[angleCount][2] + ',' + value[angleCount][3] + ',' + moveTo[face][0] + ',' + moveTo[face][1] + ')',
+            transform: 'matrix(' + value[angleCount] + ',' 
+            					 + moveTo[face][0] + ',' 
+            					 + moveTo[face][1] + ')',
             transition: "all 0.3s ease",
             'transform-origin': moveTo[face][2]
         });
