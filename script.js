@@ -58,9 +58,9 @@ $(document).ready(function() {
             }
             //if not, just preserve previous rotation and translate
         }
-        //transformation matrices for rotating around the face at position moveTo[]
+        // transformation matrices for rotating around the face at position moveTo[]
         $('.cube').css({
-            transform: 'matrix(' + value[angleCount] + ',' 
+            transform: 'matrix(' + value[3] + ',' 
             					 + moveTo[face][0] + ',' 
             					 + moveTo[face][1] + ')',
             transition: "all 0.3s ease",
@@ -68,8 +68,8 @@ $(document).ready(function() {
         });
     }
     $('div.rotate-button').click(function() {
-        var id = $(this).attr('id');
-        transform(id, 'rotate');
+        // var id = $(this).attr('id');
+        // transform(id, 'rotate');
     });
     $('div.translate').click(function() {
         var id = $(this).attr('id');
