@@ -13,7 +13,7 @@ $(document).ready(function() {
         var rotateX = (360 / winHeight) * x;
         if (count === 0) {
             $('.cube').css({
-                'transform': '  translate3d(50%, 30%, -1000px)   rotateY(' + rotateX + 'deg) rotateX(' + rotateY + 'deg)'
+                'transform': '  translate3d(50%, 30%, -1000px)   rotateY(' + rotateX + 'deg) rotateX(' + rotateY + 'deg)',
             });
         }
     });
