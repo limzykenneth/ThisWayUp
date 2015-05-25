@@ -13,12 +13,12 @@
 
 a:link{
     text-decoration:none;
-    color:#c30;
+    color:#cc3300;
 }
 
 a:visited{
     text-decoration:none;
-    color:#c30;
+    color:#cc3300;
 }
 
 body{
@@ -148,10 +148,10 @@ div{
     opacity: 0.3;
 }
 .navy{
-    color:#006;
+    color:#000066;
 }
 .red{
-    color:#c30;
+    color:#cc3300;
 }
 .upsidedowntext{
     transform:rotate(180deg);
@@ -349,9 +349,9 @@ div{
     width: 50px;
     height: 50px;
     background-repeat: no-repeat;
-    top: 47%;
-    left: 47%;
-    background-size: 60%;
+    top: 45%;
+    left: 45%;
+    background-size: 80%;
     position: absolute;
     cursor: pointer;
 }
@@ -360,7 +360,7 @@ div{
     width: 50px;
     height: 50px;
     position: absolute;
-    background-size: 30%;
+    background-size: 40%;
     background-repeat: no-repeat;
     cursor: pointer;
     background-position: 42% 100%;
