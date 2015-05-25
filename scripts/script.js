@@ -13,7 +13,7 @@ $(document).ready(function() {
         var rotateX = (360 / winHeight) * x;
         if (count === 0) {
             $('.cube').css({
-                'transform': '  translate3d(50%, 30%, -1000px)   rotateY(' + rotateX + 'deg) rotateX(' + rotateY + 'deg)',
+                'transform': '  translate3d(50%, 50%, -1000px)   rotateY(' + rotateX + 'deg) rotateX(' + rotateY + 'deg)',
             });
         }
     });
@@ -23,7 +23,8 @@ $(document).ready(function() {
             count += 1;
             $('.cube').css({
                 'transform': ' translate3d(50%, 30%, -1000px) rotateY(' + '0' + 'deg) rotateX(' + '0' + 'deg) ',
-                'transition': ' all 1.8s ease'
+                'transition': ' all 1.8s ease',
+                cursor: 'default'
             });
             $(".cube .bottom .back").css("background","#fff");
             $(this).off();
@@ -172,15 +173,15 @@ $(document).ready(function(){
         'Gautam Tankaria',
         'Georgia Cranstoun',
         'Hannah Nightingale',
-        'Harriet Patricia Wade',
+        'Hattie Wade',
         'Ho Yiu Frankie Leung',
         '<a href="http://hortensesells.tumblr.com" target="_blank">Hortense Franc</a>',
         'Isobel Ann Lily Orton',
-        'Jack William James Smith',
+        'Jack Smith',
         'Jasmine Kurino',
         'Jillian Ostek',
         'Jiwon Song (Sophia)',
-        'John Cubillan',
+        '<a href="http://johncubillan.co.uk" target="_blank">John Cubillan</a>',
         '<a href="http://jordan-devos.com" target="_blank">Jordan DeVos</a>',
         '<a href="http://jordanwoodage.com" target="_blank">Jordan Woodage</a>',
         'Joshua James Smith',
@@ -197,7 +198,7 @@ $(document).ready(function(){
         'Melissa Zee',
         'Michael Sierra',
         'Mika Hosono',
-        'Natalie Patricia Preston',
+        '<a href="http://www.nataliepreston.com" target="_blank">Natalie Preston</a>',
         'Navjot Singh Chana',
         'Nikki Johanna Ritmeijer',
         'Oi Kei Elky Li',
@@ -238,6 +239,12 @@ $(document).ready(function(){
     $("#page-content2 #nameList2").html(list2);
     $("#page-content2 #nameList3").html(list3);
     $("#page-content1 #nameList4").html(list4);
+
+    $(".navigation").hover(function(){
+        $(this).css("opacity", "1");
+    },function(){
+        $(this).css("opacity", "0.3");
+    })
 
     // $(window).click(function(e){
     //     // caching the object for performance reasons

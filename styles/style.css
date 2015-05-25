@@ -18,7 +18,7 @@ a:link{
 
 a:visited{
     text-decoration:none;
-    color:#a10;
+    color:#c30;
 }
 
 body{
@@ -145,8 +145,21 @@ div{
 
 .navigation{
     z-index:2;
+    opacity: 0.3;
 }
-
+.navy{
+    color:#006;
+}
+.red{
+    color:#c30;
+}
+.upsidedowntext{
+    transform:rotate(180deg);
+    -webkit-transform:rotate(180deg);
+    -moz-transform:rotate(180deg);
+    text-decoration: underline;
+    font-weight:bold;
+}
 
 /* By Jordan Woodage */
 .it, span, .cube .side {
@@ -170,6 +183,7 @@ div{
 }
 .cube, .cube .side {
     postion:absolute;
+    left: 10em;
     width: 500px;
     height: 500px;
     background: rgba(255, 255, 255, 0.9);
@@ -268,12 +282,14 @@ div{
     overflow: hidden;
 }
 .cube {
-    -webkit-transform: translate3d(50%, 30%, -1000px);
-            transform: translate3d(50%, 30%, -1000px);
+       -moz-transform: translate3d(50%, 50%, -1000px);
+    -webkit-transform: translate3d(50%, 50%, -1000px);
+            transform: translate3d(50%, 50%, -1000px);
     -webkit-transform-origin: 50% 50% -250px;
     background: url(http://www.upwaythis.com/images/logo-2.png) #fff;
     background-size: 90%;
     background-position: 50% 50%;
+    cursor:pointer;
 }
 .cube.rotate {
     -webkit-animation: rotate-cube-slow 8s linear infinite;
@@ -357,7 +373,7 @@ div{
             transform: rotate(90deg);
 }
 .arrow-right {
-    top: 45%;
+    top: 44%;
     right: 10%;
     -webkit-transform: rotate(270deg);
         -ms-transform: rotate(270deg);
@@ -365,7 +381,7 @@ div{
 }
 .arrow-down {
     bottom: 10%;
-    left: 45%;
+    left: 46%;
 }
 .arrow-up {
     top: 10%;
