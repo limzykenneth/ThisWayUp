@@ -41,8 +41,6 @@ $(document).ready(function() {
         });
     }
     var angleCount = 3;
-    console.log(centerX);
-    console.log(centerY);
 
     function transform(face, transformType) {
         //rotation matrix, with scale according to scale factor
