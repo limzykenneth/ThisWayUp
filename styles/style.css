@@ -57,7 +57,6 @@ p{
 }
 
 div{
-
 }
 
 
@@ -67,6 +66,8 @@ div{
     position:relative;
     width:20%;
     float:left;
+    font-size:0.7em;
+    line-height: 1.5em;
 }
 #page-content1 .nameList, #page-content2 .nameList{
     -webkit-column-count:2;
@@ -126,7 +127,7 @@ div{
     line-height:1.2em;
 }
 .larger{
-    font-size: 1em;
+    font-size: 1.4em;
     line-height: 1.35em;
 }
 
@@ -356,8 +357,9 @@ div{
     width: 50px;
     height: 50px;
     background-repeat: no-repeat;
-    top: 45%;
-    left: 45%;
+    top: 47%;
+    left: 47%;
+    background-size: 60%;
     position: absolute;
     cursor: pointer;
 }
@@ -366,10 +368,10 @@ div{
     width: 50px;
     height: 50px;
     position: absolute;
-    background-size: 40%;
+    background-size: 30%;
     background-repeat: no-repeat;
     cursor: pointer;
-    background-position: 42% 42%;
+    background-position: 42% 100%;
 }
 .arrow-left {
     top: 45%;

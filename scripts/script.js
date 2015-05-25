@@ -2,7 +2,7 @@ $(document).ready(function() {
     var centerX = ($(window).width() / 2) - 250;
     var centerY = ($(window).height() / 2) - 250;
     var scale = scalefactor();
-    var anglesNow = 0;
+    var anglesNow = [0,0,0,0,0,0];
     var count = 0;
     var winWidth = $(window).width();
     var winHeight = $(window).height();
@@ -25,6 +25,7 @@ $(document).ready(function() {
                 'transform': ' translate3d(50%, 30%, -1000px) rotateY(' + '0' + 'deg) rotateX(' + '0' + 'deg) ',
                 'transition': ' all 1.8s ease'
             });
+            $(".cube .bottom .back").css("background","#fff");
             $(this).off();
             setTimeout(function() {
                 $('.cube, .cube .side').css('-webkit-transform-style','flat').css('transform','none');
@@ -34,6 +35,7 @@ $(document).ready(function() {
                 $(".unfolded").css({
                     display: 'inline'
                 });
+                $(".cube").css("background","#fff");
             },2000);
         });
     }
@@ -74,15 +76,37 @@ $(document).ready(function() {
             'transform-origin': moveTo[face][2]
         });
     }
+    var $elem = $('#page-content3');
     $('div.rotate-button').click(function() {
         var id = $(this).attr('id');
         // transform(id, 'rotate');
+
         // caching the object for performance reasons
-        var $elem = $('#page-content3');
+
+        switch(id){
+            case '0':
+                $elem = $('#page-content3');
+                break;
+            case '1':
+                $elem = $('#page-content5');
+                break;
+            case '2':
+                $elem = $('#page-content0');
+                break;
+            case '3':
+                $elem = $('#page-content4');
+                break;
+            case '4':
+                $elem = $('#page-content2');
+                break;
+            case '5':
+                $elem = $('#page-content1');
+                break;
+        }
 
         // we use a pseudo object for the animation
         // (starts from `0` to `angle`), you can name it as you want
-        $({deg: anglesNow}).animate({deg: anglesNow+90}, {
+        $({deg: anglesNow[id]}).animate({deg: anglesNow[id]+90}, {
             duration: 500,
             step: function(now) {
                 // in the step-callback (that is fired each step of the animation),
@@ -93,7 +117,7 @@ $(document).ready(function() {
                 });
             }
         });
-        anglesNow=anglesNow+90;
+        anglesNow[id]=anglesNow[id]+90;
     });
     $('div.translate').click(function() {
         var id = $(this).attr('id');
