@@ -160,6 +160,16 @@ div{
     text-decoration: underline;
     font-weight:bold;
 }
+#page-content5 .large{
+    height:75px;
+    width:auto;
+    padding:5px;
+}
+#page-content5 .medium{
+    height:50px;
+    width:auto;
+    padding:5px;
+}
 
 /* By Jordan Woodage */
 .it, span, .cube .side {
