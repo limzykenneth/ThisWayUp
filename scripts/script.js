@@ -198,7 +198,7 @@ $(document).ready(function(){
         'Mika Hosono',
         '<a href="http://www.nataliepreston.com" target="_blank">Natalie Preston</a>',
         'Navjot Singh Chana',
-        'Nikki Johanna Ritmeijer',
+        '<a href="http://cargocollective.com/nikkiritmeijer" target="_blank">Nikki Ritmeijer</a>',
         'Elky Li',
         'Olga Bagaeva',
         'Olga Carpenco',
