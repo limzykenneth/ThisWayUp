@@ -1,12 +1,17 @@
 @font-face {
-    font-family: "Cooper Hewitt";
-    src: url(fonts/CooperHewitt-Medium.woff);
-    font-weight: normal;
+    font-family: 'Cooper Hewitt';
+    src: url('cooperhewitt-bold-webfont.woff2') format('woff2'),
+         url('cooperhewitt-bold-webfont.woff') format('woff');
+    font-weight: bold;
+    font-style: bold;
 }
 @font-face {
-    font-family: "Cooper Hewitt";
-    src: url(fonts/CooperHewitt-Bold.woff);
-    font-weight: bold;
+    font-family: 'Cooper Hewitt';
+    src: url('cooperhewitt-medium-webfont.woff2') format('woff2'),
+         url('cooperhewitt-medium-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
 }
 
 /* default settings (layout only, NOT for typographic details) */
