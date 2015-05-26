@@ -221,7 +221,7 @@ $(document).ready(function(){
         'Varvara Zelenko',
         'Vorathap Kiathapkajon',
         'Xinxin Zheng',
-        'Yangzi Wang',
+        '<a href="http://yangziwang.com" target="_blank">Yangzi Wang</a>',
         'Yi Lin Kezia Kong',
         '<a href="http://www.mxxchxn.com" target="_blank">Mia Chen</a>',
         'Yuli Serfaty',
