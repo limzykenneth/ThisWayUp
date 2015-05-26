@@ -152,9 +152,9 @@ $(document).ready(function(){
     var studentNames = [
         'Adam Willis',
         'Adhiraj Singh',
-        'Aisha A Olatokunbo Tijani',
+        'Aisha Tijani',
         'Amy Chau',
-        'Amy Louise Elms',
+        '<a href="http://amyelmsdesign.tumblr.com" target="_blank">Amy Louise Elms</a>',
         'Angele T A M Delajoux',
         'Anh Thu Dam',
         'Atikhun Jansanjai',
@@ -199,15 +199,15 @@ $(document).ready(function(){
         '<a href="http://www.nataliepreston.com" target="_blank">Natalie Preston</a>',
         'Navjot Singh Chana',
         'Nikki Johanna Ritmeijer',
-        'Oi Kei Elky Li',
+        'Elky Li',
         'Olga Bagaeva',
         'Olga Carpenco',
-        'Philippine M C Sohet',
+        '<a href="http://philippinesohet.com" target="_blank">Philippine Sohet</a>',
         'Pui Sang Wu',
         'Rafael Bruni De Lima',
         'Raymond Hui',
         '<a href="http://www.rebeccabartola.com" target="_blank">Rebecca Bartola</a>',
-        'Rebecca Lardeur',
+        '<a href="http://rbk.graphics" target="_blank">Rebecca Lardeur</a>',
         'Satoko Furusawa',
         'Sean Wei Jun Song',
         'Shannon Swinburn',
@@ -223,9 +223,10 @@ $(document).ready(function(){
         'Xinxin Zheng',
         'Yangzi Wang',
         'Yi Lin Kezia Kong',
-        'Yi-Hsuan Chen',
+        '<a href="http://www.mxxchxn.com" target="_blank">Mia Chen</a>',
         'Yuli Serfaty',
-        '<a href="http://designerken.be/designing/" target="_blank">Kenneth Lim</a>'];
+        '<a href="http://designerken.be/designing/" target="_blank">Kenneth Lim</a>',
+        '<a href="https://www.behance.net/bernirgb" target="_blank">Bernardita Rodriguez</a>'];
 
     for(i=0; i<19; i++){
             list1 = list1 + "<div>" + studentNames[i] + "</div>";
