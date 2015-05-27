@@ -18,12 +18,12 @@
 
 a:link{
     text-decoration:none;
-    color:#cc3300;
+    color:#cc0000;
 }
 
 a:visited{
     text-decoration:none;
-    color:#cc3300;
+    color:#cc0000;
 }
 
 body{
@@ -156,7 +156,7 @@ div{
     color:#000066;
 }
 .red{
-    color:#cc3300;
+    color:#cc0000;
 }
 .upsidedowntext{
     transform:rotate(180deg);
