@@ -172,7 +172,7 @@ $(document).ready(function(){
         'Georgia Cranstoun',
         'Hannah Nightingale',
         'Hattie Wade',
-        'Ho Yiu Frankie Leung',
+        '<a href="http://frankiehyleung.com" target="_blank">Frankie Ho Yiu Leung</a>',
         '<a href="http://hortensesells.tumblr.com" target="_blank">Hortense Franc</a>',
         'Isobel Ann Lily Orton',
         'Jack Smith',
