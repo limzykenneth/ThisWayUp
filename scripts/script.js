@@ -7,25 +7,37 @@ $(document).ready(function() {
     var winWidth = $(window).width();
     var winHeight = $(window).height();
     $(document).mousemove(function(e) {
-        var x = e.pageX;
-        var y = e.pageY;
-        var rotateY = (360 / winWidth) * y;
-        var rotateX = (360 / winHeight) * x;
-        if (count === 0) {
-            $('.cube').css({
-                'transform': '  translate3d(50%, 50%, -1000px)   rotateY(' + rotateX + 'deg) rotateX(' + rotateY + 'deg)',
-            });
+        if(!/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+            var x = e.pageX;
+            var y = e.pageY;
+            var rotateY = (360 / winWidth) * y;
+            var rotateX = (360 / winHeight) * x;
+            if (count === 0) {
+                $('.cube').css({
+                    'transform': '  translate3d(100%, 100%, -1000px)   rotateY(' + rotateX + 'deg) rotateX(' + rotateY + 'deg)',
+                });
+            }
         }
     });
+    if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+        $('.cube').css("transform","translate3d(0%,0%,-1000px)  rotateY(-15deg) rotateX(-10deg)");
+    }
     if (count === 0) {
         $(".cube").click(function() {
+            if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+                $('.cube').css({
+                    'transform': ' translate3d(0%, 0%, -1000px) rotateY(0deg) rotateX(0deg) ',
+                    'transition': ' all 1.8s ease',
+                });
+            }else{
+                $('.cube').css({
+                    'transform': ' translate3d(100%, 80%, -1000px) rotateY(' + '0' + 'deg) rotateX(' + '0' + 'deg) ',
+                    'transition': ' all 1.8s ease',
+                    cursor: 'default'
+                });
+            }
             $('.side.top, .side.left, .side.right,.side.bottom,.side.back,.side.front,.cube').addClass('flat');
             count += 1;
-            $('.cube').css({
-                'transform': ' translate3d(50%, 30%, -1000px) rotateY(' + '0' + 'deg) rotateX(' + '0' + 'deg) ',
-                'transition': ' all 1.8s ease',
-                cursor: 'default'
-            });
             $(".cube .bottom .back").css("background","#fff");
             $(this).off();
             setTimeout(function() {
@@ -217,7 +229,7 @@ $(document).ready(function(){
         'Tatiana Ermolaeva',
         'Theo Bernard',
         '<a href="http://theresecappelen.com" target="_blank">Therese Cappelen</a>',
-        'Varvara Zelenko<br><br>',
+        'Varvara Zelenko',
         'Vorathap Kiathapkajon',
         'Xinxin Zheng',
         '<a href="http://yangziwang.com" target="_blank">Yangzi Wang</a>',
